@@ -2,6 +2,22 @@
 
 ```{r}
 library(ggplot2)
-ggplot(iris, aes(Sepal.Length, Sepal.Width))+
-  geom_point()
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species, shape = Species)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    title = "Sepal Dimensions in Iris Dataset",
+    subtitle = "Colored and shaped by species",
+    x = "Sepal Length (cm)",
+    y = "Sepal Width (cm)",
+    color = "Species",
+    shape = "Species"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(size = 12),
+    legend.position = "right"
+  )
+
 ```

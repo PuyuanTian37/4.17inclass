@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Comparison of LIME and SHAP Interpretation Methods",
     "section": "",
-    "text": "1 Introduction\n\n\nCode\nlibrary(ggplot2)\nggplot(iris, aes(Sepal.Length, Sepal.Width))+\n  geom_point()",
+    "text": "1 Introduction\n\n\nCode\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species, shape = Species)) +\n  geom_point(size = 3, alpha = 0.7) +\n  labs(\n    title = \"Sepal Dimensions in Iris Dataset\",\n    subtitle = \"Colored and shaped by species\",\n    x = \"Sepal Length (cm)\",\n    y = \"Sepal Width (cm)\",\n    color = \"Species\",\n    shape = \"Species\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    legend.position = \"right\"\n  )",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
